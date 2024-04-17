@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Heart Disease Prediction</title>
+    <style>
+        h1 {
+        font-size:40px;
+        font-family:Roboto;
+        color:rgb(255,0,0);
+        text-align:center;
+        }
+        p{
+        font-size:20px;
+        font-family:Roboto;
+        text-align:center;
+        }
+        .centered-form {
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Heart Disease Prediction</h1>
+
+    {% if result %}
+      <p>{{result}}</p>
+    {% endif %}
+
+    <div class="centered-form">
+        <form method="post" action="/Predict">
+            <label>male</label><br>
+            <input type="text" name="male" required><br><br>
+
+            <label>age</label><br>
+            <input type="text" name="age" required><br><br>
+
+            <label>currentSmoker</label><br>
+            <input type="text" name="currentSmoker" required><br><br>
+
+            <label>cigsPerDay</label><br>
+            <input type="text" name="cigsPerDay" required><br><br>
+
+            <label>BPMeds</label><br>
+            <input type="text" name="BPMeds" required><br><br>
+
+            <label>prevalentStroke</label><br>
+            <input type="text" name="prevalentStroke" required><br><br>
+
+            <label> prevalentHyp</label><br>
+            <input type="text" name=" prevalentHyp" required><br><br>
+
+            <label>diabetes</label><br>
+            <input type="text" name="diabetes" required><br><br>
+
+            <label>totChol</label><br>
+            <input type="text" name="totChol" required><br><br>
+
+            <label>sysBP</label><br>
+            <input type="text" name="sysBP" required><br><br>
+
+            <label>diaBP</label><br>
+            <input type="text" name="diaBP" required><br><br>
+
+            <label>BMI</label><br>
+            <input type="text" name="BMI" required><br><br>
+
+            <label>heartRate</label><br>
+            <input type="text" name="heartRate" required><br><br>
+
+            <label>glucose</label><br>
+            <input type="text" name="glucose" required><br><br>
+
+            <input type="submit" value="Predict"><br><br>
+        </form>
+    </div>
+</body>
+</html>
